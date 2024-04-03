@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:8000/snacks/'
+export const API_URL = 'https://fastsnacks-utumofjy.b4a.run/snacks'; // 'http://localhost:8000/snacks/'
 
 interface Snack {
     readonly id?: number | string,
@@ -7,7 +7,7 @@ interface Snack {
 }
 
 export async function deleteSnack(id: Number) {
-    await $fetch(API_URL + id, {
+    await $fetch(API_URL + '/' + id, {
         method: 'delete'
     });
 
